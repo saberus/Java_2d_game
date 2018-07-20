@@ -4,11 +4,12 @@ import java.awt.Graphics;
 
 import com.saber.gameOne.graphics.Assets;
 import com.saber.gameOne.mainLogic.Game;
+import com.saber.gameOne.util.Handler;
 
 public class SettingState extends State {
 	
-	public SettingState(Game game) {
-		super(game);
+	public SettingState(Handler handler) {
+		super(handler);
 	}
 
 	@Override

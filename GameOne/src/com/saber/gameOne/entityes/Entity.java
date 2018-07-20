@@ -2,22 +2,27 @@ package com.saber.gameOne.entityes;
 
 import java.awt.Graphics;
 
-import com.saber.gameOne.mainLogic.Game;
+import com.saber.gameOne.util.Handler;
+import com.sun.javafx.geom.Rectangle;
 
 public abstract class Entity {
 
-	protected Game game;
+	protected Handler handler;
 	protected float x, y;
 	protected int width, height;
+	protected Rectangle bounds; 	
 	
 	
 	
-	public Entity(Game game, float x, float y, int width, int height) {
-		this.game = game;
+	
+	public Entity(Handler handler, float x, float y, int width, int height) {
+		this.handler = handler;
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		
+		bounds = new Rectangle(0,0, width, height);
 	}
 	
 	public abstract void update();

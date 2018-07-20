@@ -9,6 +9,7 @@ import com.saber.gameOne.states.GameState;
 import com.saber.gameOne.states.State;
 import com.saber.gameOne.states.StateManager;
 import com.saber.gameOne.util.Display;
+import com.saber.gameOne.util.Handler;
 import com.saber.gameOne.util.input.KeyManager;
 
 public class Game {
@@ -43,6 +44,9 @@ public class Game {
 	
 	//Camera
 	private GameCamera gameCamera;
+	
+	//Handler
+	private Handler handler;
 	
 	private BufferStrategy bs = null ;
 	private Graphics g;
@@ -160,8 +164,11 @@ public class Game {
 		//Initialize Camera
 		gameCamera = new GameCamera(this, 0,0);
 		
+		//Initialize Handler
+		handler = new Handler(this);
+		
 		//Initialize States
-		gameState = new GameState(this);
+		gameState = new GameState(handler);
 		StateManager.setCurrentState(gameState);
 		
 

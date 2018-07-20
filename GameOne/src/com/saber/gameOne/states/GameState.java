@@ -3,8 +3,7 @@ package com.saber.gameOne.states;
 import java.awt.Graphics;
 
 import com.saber.gameOne.entityes.creatures.Player;
-
-import com.saber.gameOne.mainLogic.Game;
+import com.saber.gameOne.util.Handler;
 import com.saber.gameOne.worlds.World;
 
 public class GameState extends State {
@@ -14,13 +13,14 @@ public class GameState extends State {
 	
 	private Player player;
 	
-	public GameState(Game game) {
-		super(game);
-		testWorld = new World(game, "res/world/world1.txt");
-		player = new Player(game, testWorld.getStartX(), testWorld.getStartX());
+	public GameState(Handler handler) {
+		super(handler);
+		testWorld = new World(handler, "res/world/world1.txt");
+		handler.setWorld(testWorld);
+		player = new Player(handler, testWorld.getStartX(), testWorld.getStartX());
 
 		
-	}
+	} 
 
 	@Override
 	public void render(Graphics g) {
