@@ -92,6 +92,15 @@ public class World {
 	public void setStartY(int startY) {
 		this.startY = startY;
 	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+	
 	
 	
 

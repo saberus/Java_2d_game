@@ -1,9 +1,10 @@
 package com.saber.gameOne.entityes;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 import com.saber.gameOne.util.Handler;
-import com.sun.javafx.geom.Rectangle;
+
 
 public abstract class Entity {
 

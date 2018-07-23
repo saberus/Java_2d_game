@@ -161,12 +161,12 @@ public class Game {
 		//Initialize all the assets
 		Assets.init();
 		
-		//Initialize Camera
-		gameCamera = new GameCamera(this, 0,0);
-		
 		//Initialize Handler
 		handler = new Handler(this);
 		
+		//Initialize Camera
+		gameCamera = new GameCamera(handler, 0,0);
+	
 		//Initialize States
 		gameState = new GameState(handler);
 		StateManager.setCurrentState(gameState);
